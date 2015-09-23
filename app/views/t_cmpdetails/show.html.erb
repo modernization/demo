@@ -1,0 +1,169 @@
+<h1 align="Center">Show Complaint Details of ComplaintNumber: <%= @t_cmpdetail.cmtnmb %>
+</h1>
+
+<p id="notice"><%= notice %></p>
+
+
+
+  <div class="field">
+   	<b>Complaint Date:</b><%= @t_cmpdetail.cmtdate %>
+  </div>
+  <div class="field">
+  	<b>Complaint Number:</b><%= @t_cmpdetail.cmtnmb %>
+  </div>
+  <div class="field">
+	<b>Complaint Status:</b><%= @t_cmpdetail.cmtstatus %>   
+  </div>
+  <hr></hr>
+<h3>Complaint Details</h3>  
+<div class="field">
+   <b> Anonymous</b><br/>    
+<div><input id="cmtanonymous " name="cmtanonymous " value="<%= @t_cmpdetail.cmtanonymous %>" type="checkbox">I choose to remain Anonymous. I do not wish to provide my name in connection with this decision to remain anonymous will prevent the SBA-OIG from contacting me for additional information and may prevent a comprehensive assessment of my complaint.
+  </div>
+  
+<table border ="1">
+  <thead>
+    <tr>      
+      <th>First Name</th>
+      <th>Middle Name</th>
+      <th>Last Name</th>
+      <th>Street 1</th>
+      <th>Street 2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Country</th>
+      <th>Phone</th>
+      <th>Email</th>
+ </tr>
+  </thead>
+  <tbody>
+      <tr>        
+        <td><%= @t_cmpdetail.cmtfirstnm %></td>
+        <td><%= @t_cmpdetail.cmtmiddlenm %></td>
+        <td><%= @t_cmpdetail.cmtlastnm %></td>
+        <td><%= @t_cmpdetail.cmtst1 %></td>
+        <td><%= @t_cmpdetail.cmtst2 %></td>
+        <td><%= @t_cmpdetail.cmtcity %></td>
+        <td><%= @t_cmpdetail.cmtst %></td>
+        <td><%= @t_cmpdetail.cmtzip %></td>
+        <td><%= @t_cmpdetail.cmtcountry %></td>
+        <td><%= @t_cmpdetail.cmtphone %></td>
+	  <td><%= @t_cmpdetail.cmtemail%></td>
+     </div>
+</table>
+
+<br>
+ <hr></hr>
+<h3>Wrongdoer Details</h3>
+<table border ="1">
+  <thead>
+    <tr>      
+      <th>First Name</th>
+      <th>Middle Name</th>
+      <th>Last Name</th>
+	<th>Title</th>
+      <th>Street 1</th>
+      <th>Street 2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>        
+        <td><%= @t_cmpdetail.wgrfirstnm %></td>
+        <td><%= @t_cmpdetail.wgrmiddlenm %></td>
+        <td><%= @t_cmpdetail.wgrlastnm %></td>
+        <td><%= @t_cmpdetail.wgrtitle  %></td>
+        <td><%= @t_cmpdetail.wgrst1 %></td>
+        <td><%= @t_cmpdetail.wgrst2 %></td>
+        <td><%= @t_cmpdetail.wgrcity %></td>
+        <td><%= @t_cmpdetail.wgrst %></td>
+        <td><%= @t_cmpdetail.wgrzip %></td>
+        <td><%= @t_cmpdetail.wgrcountry %></td>        
+     </div>
+</table>
+<br>
+ <hr></hr>
+<h3>Wrongdoer Business Details</h3>
+<table border ="1">
+  <thead>
+    <tr>      
+      <th>First Name</th>
+      <th>Middle Name</th>
+      <th>Last Name</th>
+	<th>Company DUNS</th>
+      <th>Street 1</th>
+      <th>Street 2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>        
+        <td><%= @t_cmpdetail.wgrcomfirstnm %></td>
+        <td><%= @t_cmpdetail.wgrcommiddlenm %></td>
+        <td><%= @t_cmpdetail.wgrcomlastnm %></td>
+        <td><%= @t_cmpdetail.wgrcomduns %></td>
+        <td><%= @t_cmpdetail.wgrcomst1 %></td>
+        <td><%= @t_cmpdetail.wgrcomst2 %></td>
+        <td><%= @t_cmpdetail.wgrcomcity %></td>
+        <td><%= @t_cmpdetail.wgrcomst %></td>
+        <td><%= @t_cmpdetail.wgrcomzip %></td>
+        <td><%= @t_cmpdetail.wgrcomcountry %></td>        
+     </div>
+</table>
+<br>
+ <hr></hr>
+ <h3>SBA Program	</h3>
+<table border ="1">
+  <thead>
+    <tr>      
+      <th>SBA Loan/Program Type</th>
+      <th>Name</th>
+      <th>Loan Number</th>	
+    </tr>
+  </thead>
+  <tbody>
+      <tr>        
+        <td><%= @t_cmpdetail.prog %></td>
+        <td><%= @t_cmpdetail.progloannm %></td>
+        <td><%= @t_cmpdetail.progloannmb %></td>        
+     </div>
+</table>
+<br>
+ <hr></hr>
+ <h3>Complaint Narrative</h3> 
+  <div class="field">    
+    <%= @t_cmpdetail.cmtnarrative %>
+  </div>
+<br>
+ <hr></hr>
+  <div><input id="cmtrptother" name="cmtrptother" value="<%= @t_cmpdetail.cmtrptother %>" type="checkbox">Have you reported this matter to any other Organizations/Agencies?</div>
+<table border ="1">
+  <thead>
+    <tr>
+      <th>Agency/Org Name</th>
+      <th>When</th>
+      <th>Status</th>		
+    </tr>
+  </thead>
+  <tbody>
+      <tr>           
+        <td><%= @t_cmpdetail.cmtrptorg %></td>
+        <td><%= @t_cmpdetail.cmtrptdt %></td>  
+	   <td><%= @t_cmpdetail.cmtrptstatus %></td>     
+     </div>
+</table>
+<br>
+ <hr></hr>
+  <div class="field"> <input id="cmtcertify" name="cmtcertify" value="<%= @t_cmpdetail.cmtcertify %>" type="checkbox">I certify that all the statements made in this complaint area are true, complete, and 
+understand that a false statement or concealment of a material fact is a criminal offense (18 U.S.C. 1001; Inspector General Act of 1978, As Amended, 7)</div>
+
+
+<b><%= link_to 'Edit', edit_t_cmpdetail_path(@t_cmpdetail) %> |
+<%= link_to 'Back', t_cmpdetails_path %></b>

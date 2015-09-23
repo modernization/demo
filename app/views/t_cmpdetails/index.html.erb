@@ -1,0 +1,53 @@
+
+<h1 align="center">Complaint List</h1> </br>
+<b><div align="center"><%= link_to 'Add New', new_t_cmpdetail_path %></diV></b></br>
+
+<table border="1" align="center">
+
+  <thead>
+    <tr>
+      <th align="center">Complaint Date</th>
+      <th align="center">Complaint #</th>
+      <th align="center">Complaint status</th>
+      <th align="center">Anonymous</th>
+      <th align="center">First Name</th>
+      <th align="center">Middle Name</th>
+      <th align="center">Last Name</th>
+      <th align="center">Street1</th>
+      <th align="center">Street2</th>
+      <th align="center">City</th>
+      <th align="center">State</th>
+      <th align="center">Zip</th>
+      <th align="center">Country</th>
+      <th align="center">Phone</th>
+      <th align="center">Email</th>      
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @t_cmpdetails.each do |t_cmpdetail| %>
+      <tr>
+        <td><%= t_cmpdetail.cmtdate %></td>
+        <td><%= t_cmpdetail.cmtnmb %></td>
+        <td><%= t_cmpdetail.cmtstatus %></td>
+        <td><%= t_cmpdetail.cmtanonymous %></td>
+        <td><%= t_cmpdetail.cmtfirstnm %></td>
+        <td><%= t_cmpdetail.cmtmiddlenm %></td>
+        <td><%= t_cmpdetail.cmtlastnm %></td>
+        <td><%= t_cmpdetail.cmtst1 %></td>
+        <td><%= t_cmpdetail.cmtst2 %></td>
+        <td><%= t_cmpdetail.cmtcity %></td>
+        <td><%= t_cmpdetail.cmtst %></td>
+        <td><%= t_cmpdetail.cmtzip %></td>
+        <td><%= t_cmpdetail.cmtcountry %></td>
+        <td><%= t_cmpdetail.cmtphone %></td>
+        <td><%= t_cmpdetail.cmtemail %></td>       
+        <td><b><%= link_to 'Show', t_cmpdetail %></b></td>
+        <td><b><%= link_to 'Edit', edit_t_cmpdetail_path(t_cmpdetail) %></b></td>        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
