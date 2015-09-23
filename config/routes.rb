@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :t_cmpdetails
+
   get 'home/index'
 
   resources :t_cmpdetails

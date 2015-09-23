@@ -39,7 +39,6 @@
       <th>State</th>
       <th>Zip</th>
       <th>Country</th>
-      <th>Phone</th>
       <th>Email</th>
  </tr>
   </thead>
@@ -53,8 +52,7 @@
         <td><%= f.text_field :cmtcity %></td>
         <td><%= f.text_field :cmtst %></td>
         <td><%= f.number_field :cmtzip %></td>
-        <td><%= f.text_field :cmtcountry %></td>
-        <td><%= f.number_field :cmtphone %></td>
+        <td><%= f.text_field :cmtcountry %></td>        
 	  <td><%= f.text_field :cmtemail%></td>
      </div>
 </table>
@@ -167,10 +165,7 @@
 </table>
 <br>
  <hr></hr>
-<div class="field">
-<label for="file">File to Upload</label> <%= file_field_tag "file" %>
 
-</div>
   <div class="field">    
     <%= f.check_box :cmtcertify %>I certify that all the statements made in this complaint area are true, complete, and 
 understand that a false statement or concealment of a material fact is a criminal offense (18 U.S.C. 1001; Inspector General Act of 1978, As Amended, 7)</div>
@@ -179,3 +174,4 @@ understand that a false statement or concealment of a material fact is a crimina
     <%= f.submit %>
   </div>
 <% end %>
+

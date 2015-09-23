@@ -18,7 +18,9 @@
 <h3>Complaint Details</h3>  
 <div class="field">
    <b> Anonymous</b><br/>    
-<div><input id="cmtanonymous " name="cmtanonymous " value="<%= @t_cmpdetail.cmtanonymous %>" type="checkbox">I choose to remain Anonymous. I do not wish to provide my name in connection with this decision to remain anonymous will prevent the SBA-OIG from contacting me for additional information and may prevent a comprehensive assessment of my complaint.
+<div>
+<%= @t_cmpdetail.cmtanonymous %>
+I choose to remain Anonymous. I do not wish to provide my name in connection with this decision to remain anonymous will prevent the SBA-OIG from contacting me for additional information and may prevent a comprehensive assessment of my complaint.
   </div>
   
 <table border ="1">
@@ -33,7 +35,6 @@
       <th>State</th>
       <th>Zip</th>
       <th>Country</th>
-      <th>Phone</th>
       <th>Email</th>
  </tr>
   </thead>
@@ -48,8 +49,7 @@
         <td><%= @t_cmpdetail.cmtst %></td>
         <td><%= @t_cmpdetail.cmtzip %></td>
         <td><%= @t_cmpdetail.cmtcountry %></td>
-        <td><%= @t_cmpdetail.cmtphone %></td>
-	  <td><%= @t_cmpdetail.cmtemail%></td>
+        <td><%= @t_cmpdetail.cmtemail%></td>
      </div>
 </table>
 
@@ -161,9 +161,10 @@
 </table>
 <br>
  <hr></hr>
-  <div class="field"> <input id="cmtcertify" name="cmtcertify" value="<%= @t_cmpdetail.cmtcertify %>" type="checkbox">I certify that all the statements made in this complaint area are true, complete, and 
+  <div class="field"> <%= @t_cmpdetail.cmtcertify %> I certify that all the statements made in this complaint area are true, complete, and 
 understand that a false statement or concealment of a material fact is a criminal offense (18 U.S.C. 1001; Inspector General Act of 1978, As Amended, 7)</div>
 
 
 <b><%= link_to 'Edit', edit_t_cmpdetail_path(@t_cmpdetail) %> |
 <%= link_to 'Back', t_cmpdetails_path %></b>
+

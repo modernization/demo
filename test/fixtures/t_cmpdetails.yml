@@ -1,95 +1,93 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  cmtdate: 2015-09-21
+  cmtdate: 2015-09-23
   cmtnmb: 1
-  cmtstatus: MyString
+  cmtstatus: MyText
   cmtanonymous: false
-  cmtfirstnm: MyString
-  cmtmiddlenm: MyString
-  cmtlastnm: MyString
-  cmtst1: MyString
-  cmtst2: MyString
-  cmtcity: MyString
-  cmtst: MyString
+  cmtfirstnm: MyText
+  cmtmiddlenm: MyText
+  cmtlastnm: MyText
+  cmtst1: MyText
+  cmtst2: MyText
+  cmtcity: MyText
+  cmtst: MyText
   cmtzip: 1
-  cmtcountry: MyString
   cmtphone: 1
-  cmtemail: MyString
-  wgrfirstnm: MyString
-  wgrmiddlenm: MyString
-  wgrlastnm: MyString
-  wgrst1: MyString
-  wgrst2: MyString
-  wgrtitlestring: MyString
-  wgrcity: MyString
-  wgrst: MyString
+  cmtemail: MyText
+  wgrfirstnm: MyText
+  wgrmiddlenm: MyText
+  wgrlastnm: MyText
+  wgrst1: MyText
+  wgrst2: MyText
+  wgrtitle: MyText
+  wgrcity: MyText
+  wgrst: MyText
   wgrzip: 1
-  wgrcountry: MyString
-  wgrcomfirstnm: MyString
-  wgrcommiddlenm: MyString
-  wgrcomlastnm: MyString
+  wgrcomfirstnm: MyText
+  wgrcommiddlenm: MyText
+  wgrcomlastnm: MyText
   wgrcomduns: 1
-  wgrcomst1: MyString
-  wgrcomst2: MyString
-  wgrcomcity: MyString
-  wgrcomst: MyString
+  wgrcomst1: MyText
+  wgrcomst2: MyText
+  wgrcomcity: MyText
+  wgrcomst: MyText
   wgrcomzip: 1
-  wgrcomcountry: MyString
-  string: MyString
-  prog: MyString
-  progloannm: MyString
+  cmtcountry: MyText
+  wgrcountry: MyText
+  wgrcomcountry: MyText
+  prog: MyText
+  progloannm: MyText
   progloannmb: 1
   cmtnarrative: MyText
   cmtrptother: false
-  cmtrptorg: MyString
-  cmtrptdt: 2015-09-21
-  cmtrptstatus: MyString
+  cmtrptorg: MyText
+  cmtrptdt: 2015-09-23
+  cmtrptstatus: MyText
   cmtcertify: false
 
 two:
-  cmtdate: 2015-09-21
+  cmtdate: 2015-09-23
   cmtnmb: 1
-  cmtstatus: MyString
+  cmtstatus: MyText
   cmtanonymous: false
-  cmtfirstnm: MyString
-  cmtmiddlenm: MyString
-  cmtlastnm: MyString
-  cmtst1: MyString
-  cmtst2: MyString
-  cmtcity: MyString
-  cmtst: MyString
+  cmtfirstnm: MyText
+  cmtmiddlenm: MyText
+  cmtlastnm: MyText
+  cmtst1: MyText
+  cmtst2: MyText
+  cmtcity: MyText
+  cmtst: MyText
   cmtzip: 1
-  cmtcountry: MyString
   cmtphone: 1
-  cmtemail: MyString
-  wgrfirstnm: MyString
-  wgrmiddlenm: MyString
-  wgrlastnm: MyString
-  wgrst1: MyString
-  wgrst2: MyString
-  wgrtitlestring: MyString
-  wgrcity: MyString
-  wgrst: MyString
+  cmtemail: MyText
+  wgrfirstnm: MyText
+  wgrmiddlenm: MyText
+  wgrlastnm: MyText
+  wgrst1: MyText
+  wgrst2: MyText
+  wgrtitle: MyText
+  wgrcity: MyText
+  wgrst: MyText
   wgrzip: 1
-  wgrcountry: MyString
-  wgrcomfirstnm: MyString
-  wgrcommiddlenm: MyString
-  wgrcomlastnm: MyString
+  wgrcomfirstnm: MyText
+  wgrcommiddlenm: MyText
+  wgrcomlastnm: MyText
   wgrcomduns: 1
-  wgrcomst1: MyString
-  wgrcomst2: MyString
-  wgrcomcity: MyString
-  wgrcomst: MyString
+  wgrcomst1: MyText
+  wgrcomst2: MyText
+  wgrcomcity: MyText
+  wgrcomst: MyText
   wgrcomzip: 1
-  wgrcomcountry: MyString
-  string: MyString
-  prog: MyString
-  progloannm: MyString
+  cmtcountry: MyText
+  wgrcountry: MyText
+  wgrcomcountry: MyText
+  prog: MyText
+  progloannm: MyText
   progloannmb: 1
   cmtnarrative: MyText
   cmtrptother: false
-  cmtrptorg: MyString
-  cmtrptdt: 2015-09-21
-  cmtrptstatus: MyString
+  cmtrptorg: MyText
+  cmtrptdt: 2015-09-23
+  cmtrptstatus: MyText
   cmtcertify: false
