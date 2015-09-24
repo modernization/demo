@@ -1,9 +1,12 @@
-<h1 align="Center">Show Complaint Details of ComplaintNumber: <%= @t_cmpdetail.cmtnmb %>
+<h1 align="Center">Show Complaint Details of : <%= @t_cmpdetail.cmtnmb %>
 </h1>
 
 <p id="notice"><%= notice %></p>
 
-
+<div align="right">
+<b><%= link_to 'Edit', edit_t_cmpdetail_path(@t_cmpdetail) %> |<%= link_to 'Back', t_cmpdetails_path %></b></diV>
+<br/>
+<h3>Complaint Details</h3>
 
   <div class="field">
    	<b>Complaint Date:</b><%= @t_cmpdetail.cmtdate %>
@@ -15,7 +18,7 @@
 	<b>Complaint Status:</b><%= @t_cmpdetail.cmtstatus %>   
   </div>
   <hr></hr>
-<h3>Complaint Details</h3>  
+  
 <div class="field">
    <b> Anonymous</b><br/>    
 <div>
@@ -23,148 +26,222 @@
 I choose to remain Anonymous. I do not wish to provide my name in connection with this decision to remain anonymous will prevent the SBA-OIG from contacting me for additional information and may prevent a comprehensive assessment of my complaint.
   </div>
   
-<table border ="1">
-  <thead>
-    <tr>      
-      <th>First Name</th>
-      <th>Middle Name</th>
-      <th>Last Name</th>
-      <th>Street 1</th>
-      <th>Street 2</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-      <th>Country</th>
-      <th>Email</th>
- </tr>
-  </thead>
-  <tbody>
-      <tr>        
-        <td><%= @t_cmpdetail.cmtfirstnm %></td>
-        <td><%= @t_cmpdetail.cmtmiddlenm %></td>
-        <td><%= @t_cmpdetail.cmtlastnm %></td>
-        <td><%= @t_cmpdetail.cmtst1 %></td>
-        <td><%= @t_cmpdetail.cmtst2 %></td>
-        <td><%= @t_cmpdetail.cmtcity %></td>
-        <td><%= @t_cmpdetail.cmtst %></td>
-        <td><%= @t_cmpdetail.cmtzip %></td>
-        <td><%= @t_cmpdetail.cmtcountry %></td>
-        <td><%= @t_cmpdetail.cmtemail%></td>
-     </div>
-</table>
+<table border ="0">
+ <tr>      
+      <th align="right">First Name: </th> <td><label title="First Name"><%= @t_cmpdetail.cmtfirstnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Middle Name: </th> <td>
+        <label title="Middle Name"><%= @t_cmpdetail.cmtmiddlenm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Last Name: </th> <td>
+        <label title="Last Name"><%= @t_cmpdetail.cmtlastnm %></label></td>
+</tr>
+<tr>
+<th align="right">Street 1: </th> <td><label title="Street 1"><%= @t_cmpdetail.cmtst1 %></label></td>
+</tr>
+<tr>      
+      <th align="right">Street 2: </th> <td>
 
+        <label title="Street 2"><%= @t_cmpdetail.cmtst2 %></label></td>
+</tr>
+<tr>
+ <th align="right">City: </th><td><label title="City"><%= @t_cmpdetail.cmtcity %></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">State: </th><td>
+<label title="State"><%= @t_cmpdetail.cmtst %></td></label>
+</td>
+</tr>
+<tr>
+ <th align="right">Zip: </th><td>
+<label title="Zip"><%= @t_cmpdetail.cmtzip %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">Country: </th><td>
+
+<label title="Country"><%= @t_cmpdetail.cmtcountry %></td></label>
+</tr>
+<tr>
+ <th align="right">Email: </th><td>
+<label title="Email"><%= @t_cmpdetail.cmtemail%></td></label>
+</td>
+</tr>
+</table>  
 <br>
  <hr></hr>
 <h3>Wrongdoer Details</h3>
-<table border ="1">
-  <thead>
-    <tr>      
-      <th>First Name</th>
-      <th>Middle Name</th>
-      <th>Last Name</th>
-	<th>Title</th>
-      <th>Street 1</th>
-      <th>Street 2</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-      <th>Country</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>        
-        <td><%= @t_cmpdetail.wgrfirstnm %></td>
-        <td><%= @t_cmpdetail.wgrmiddlenm %></td>
-        <td><%= @t_cmpdetail.wgrlastnm %></td>
-        <td><%= @t_cmpdetail.wgrtitle  %></td>
-        <td><%= @t_cmpdetail.wgrst1 %></td>
-        <td><%= @t_cmpdetail.wgrst2 %></td>
-        <td><%= @t_cmpdetail.wgrcity %></td>
-        <td><%= @t_cmpdetail.wgrst %></td>
-        <td><%= @t_cmpdetail.wgrzip %></td>
-        <td><%= @t_cmpdetail.wgrcountry %></td>        
-     </div>
-</table>
+<table border ="0">
+ <tr>      
+      <th align="right">First Name: </th> <td><label title="First Name"><%= @t_cmpdetail.wgrfirstnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Middle Name: </th> <td>
+        <label title="Middle Name"><%= @t_cmpdetail.wgrmiddlenm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Last Name: </th> <td>
+        <label title="Last Name"><%= @t_cmpdetail.wgrlastnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Title: </th> <td>
+        <label title="Title"><%= @t_cmpdetail.wgrtitle %></label></td>
+</tr>
+
+<tr>
+<th align="right">Street 1: </th> <td><label title="Street 1"><%= @t_cmpdetail.wgrst1 %></label></td>
+</tr>
+<tr>      
+      <th align="right">Street 2: </th> <td>
+
+        <label title="Street 2"><%= @t_cmpdetail.wgrst2 %></label></td>
+</tr>
+
+<tr>
+ <th align="right">City: </th><td><label title="City"><%= @t_cmpdetail.wgrcity %></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">State: </th><td>
+<label title="State"><%= @t_cmpdetail.wgrst %></td></label>
+</td>
+</tr>
+<tr>
+ <th align="right">Zip: </th><td>
+<label title="Zip"><%= @t_cmpdetail.wgrzip %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">Country: </th><td>
+
+<label title="Country"><%= @t_cmpdetail.wgrcountry %></td></label>
+</tr>
+
+
+</table>  
 <br>
+
  <hr></hr>
 <h3>Wrongdoer Business Details</h3>
-<table border ="1">
-  <thead>
-    <tr>      
-      <th>First Name</th>
-      <th>Middle Name</th>
-      <th>Last Name</th>
-	<th>Company DUNS</th>
-      <th>Street 1</th>
-      <th>Street 2</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-      <th>Country</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>        
-        <td><%= @t_cmpdetail.wgrcomfirstnm %></td>
-        <td><%= @t_cmpdetail.wgrcommiddlenm %></td>
-        <td><%= @t_cmpdetail.wgrcomlastnm %></td>
-        <td><%= @t_cmpdetail.wgrcomduns %></td>
-        <td><%= @t_cmpdetail.wgrcomst1 %></td>
-        <td><%= @t_cmpdetail.wgrcomst2 %></td>
-        <td><%= @t_cmpdetail.wgrcomcity %></td>
-        <td><%= @t_cmpdetail.wgrcomst %></td>
-        <td><%= @t_cmpdetail.wgrcomzip %></td>
-        <td><%= @t_cmpdetail.wgrcomcountry %></td>        
-     </div>
-</table>
+<table border ="0">
+ <tr>      
+      <th align="right">First Name: </th> <td><label title="First Name"><%= @t_cmpdetail.wgrcomfirstnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Middle Name: </th> <td>
+        <label title="Middle Name"><%= @t_cmpdetail.wgrcommiddlenm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Last Name: </th> <td>
+        <label title="Last Name"><%= @t_cmpdetail.wgrcomlastnm %></label></td>
+</tr>
+<tr>      
+      <th align="right">Company Duns: </th> <td>
+        <label title="Company DUNS"><%= @t_cmpdetail.wgrcomduns%></label></td>
+</tr>
+
+<tr>
+<th align="right">Street 1: </th> <td><label title="Street 1"><%= @t_cmpdetail.wgrcomst1 %></label></td>
+</tr>
+<tr>      
+      <th align="right">Street 2: </th> <td>
+
+        <label title="Street 2"><%= @t_cmpdetail.wgrcomst2 %></label></td>
+</tr>
+
+<tr>
+ <th align="right">City: </th><td><label title="City"><%= @t_cmpdetail.wgrcomcity %></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">State: </th><td>
+<label title="State"><%= @t_cmpdetail.wgrcomst %></td></label>
+</td>
+</tr>
+<tr>
+ <th align="right">Zip: </th><td>
+<label title="Zip"><%= @t_cmpdetail.wgrcomzip %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">Country: </th><td>
+
+<label title="Country"><%= @t_cmpdetail.wgrcomcountry %></td></label>
+</tr>
+
+
+</table>  
 <br>
  <hr></hr>
  <h3>SBA Program	</h3>
-<table border ="1">
-  <thead>
-    <tr>      
-      <th>SBA Loan/Program Type</th>
-      <th>Name</th>
-      <th>Loan Number</th>	
-    </tr>
-  </thead>
-  <tbody>
-      <tr>        
-        <td><%= @t_cmpdetail.prog %></td>
-        <td><%= @t_cmpdetail.progloannm %></td>
-        <td><%= @t_cmpdetail.progloannmb %></td>        
-     </div>
+
+<table border ="0">
+
+<tr>
+ <th align="right">SBA Loan/Program Type: </th><td>
+<label title="SBA Loan/Program Type"><%= @t_cmpdetail.prog %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">Name: </th><td>
+
+<label title="Name"><%= @t_cmpdetail.progloannm %></td></label>
+</tr>
+
+<tr>
+ <th align="right">Loan Number: </th><td>
+
+<label title="Loan Number"><%= @t_cmpdetail.progloannmb %></td></label>
+</tr>
+
 </table>
 <br>
  <hr></hr>
- <h3>Complaint Narrative</h3> 
-  <div class="field">    
+ <h3>t_cmpdetail Narrative</h3> 
+  <div class="field" >    
     <%= @t_cmpdetail.cmtnarrative %>
   </div>
 <br>
  <hr></hr>
-  <div><input id="cmtrptother" name="cmtrptother" value="<%= @t_cmpdetail.cmtrptother %>" type="checkbox">Have you reported this matter to any other Organizations/Agencies?</div>
+ <div><%= @t_cmpdetail.cmtrptother %> Have you reported this matter to any other Organizations/Agencies?</div>
 <table border ="1">
-  <thead>
-    <tr>
-      <th>Agency/Org Name</th>
-      <th>When</th>
-      <th>Status</th>		
-    </tr>
-  </thead>
-  <tbody>
-      <tr>           
-        <td><%= @t_cmpdetail.cmtrptorg %></td>
-        <td><%= @t_cmpdetail.cmtrptdt %></td>  
-	   <td><%= @t_cmpdetail.cmtrptstatus %></td>     
-     </div>
-</table>
+<table border ="0">
+
+<tr>
+ <th align="right">Agency/Org Name: </th><td>
+<label title="Agency/Org Name"><%= @t_cmpdetail.cmtrptorg %></td></label>
+</td>
+</tr>
+
+<tr>
+ <th align="right">When: </th><td>
+
+<label title="When"><%= @t_cmpdetail.cmtrptdt %></td></label>
+</tr>
+
+<tr>
+ <th align="right">Status: </th><td>
+
+<label title="Status"><%= @t_cmpdetail.cmtrptstatus %></td></label>
+</tr>
+
+</table>  
 <br>
  <hr></hr>
-  <div class="field"> <%= @t_cmpdetail.cmtcertify %> I certify that all the statements made in this complaint area are true, complete, and 
+
+  <div class="field">    
+    <%= @t_cmpdetail.cmtcertify %> I certify that all the statements made in this t_cmpdetail area are true, complete, and 
 understand that a false statement or concealment of a material fact is a criminal offense (18 U.S.C. 1001; Inspector General Act of 1978, As Amended, 7)</div>
 
-
-<b><%= link_to 'Edit', edit_t_cmpdetail_path(@t_cmpdetail) %> |
-<%= link_to 'Back', t_cmpdetails_path %></b>
+<b><%= link_to 'Edit', edit_t_cmpdetail_path(@t_cmpdetail) %> |<%= link_to 'Back', t_cmpdetails_path %></b>
 
